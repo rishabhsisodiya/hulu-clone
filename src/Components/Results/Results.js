@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Results.css';
 import VideoCard from './VideoCard/VideoCard';
 import axios from '../../Request/axios';
+import FlipMove from 'react-flip-move';
 
 function Results(props) {
     const [movies, setMovies] = useState([]);
@@ -17,10 +18,12 @@ function Results(props) {
     },[props.selectedGenre]);
 return (
     <div className="results">
-        {/* add key to videocard as you are rendering a list of component */}
-        {movies.map(movie => ( 
-        <VideoCard key={movie.id} movie={movie} />
-        ))}
+        <FlipMove>
+            {/* add key to videocard as you are rendering a list of component */}
+            {movies.map(movie => ( 
+            <VideoCard key={movie.id} movie={movie} />
+            ))} 
+        </FlipMove>
     </div>
 );
 }
