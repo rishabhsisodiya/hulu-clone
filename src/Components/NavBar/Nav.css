@@ -30,3 +30,9 @@
     opacity: 1;
     transform: scale(1.2);
 }
+
+@media(max-width:480px){
+    .nav >h2 {
+        font-size: large;
+    }
+}

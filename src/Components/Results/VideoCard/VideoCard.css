@@ -7,8 +7,6 @@
 }
 
 .videoCard >img{
-    /* height: 49vh;
-width: 36vw; */
     height:300px;
     width:500px;
     object-fit: contain;
@@ -21,6 +19,27 @@ width: 36vw; */
 
 .videoCard >h2{
     padding-top: 10px;
+}
+
+@media(max-width:480px){
+
+    .videoCard{
+        width:300px;
+        height:260px;
+    }
+    
+    .videoCard >img{
+        height:200px;
+        width:300px;
+    }
+    
+    .videoCard >h2{
+        font-size: small;
+    }
+    .videoCard__stats{
+        font-size: smaller;
+    }
+   
 }
 
 /* Date and likes appear on hovering */
